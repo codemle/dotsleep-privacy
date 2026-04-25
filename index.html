@@ -62,7 +62,6 @@
     }
     footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 40px; }
     footer a { color: var(--accent); text-decoration: none; }
-    [data-lang="en"] { display: none; }
   </style>
 </head>
 <body>
@@ -73,8 +72,8 @@
     <h1>DotSleep</h1>
     <div class="subtitle" data-lang="zh">隐私政策</div>
     <div class="subtitle" data-lang="en" style="display:none">Privacy Policy</div>
-    <div class="updated" data-lang="zh">最后更新：2025年1月</div>
-    <div class="updated" data-lang="en" style="display:none">Last updated: January 2025</div>
+    <div class="updated" data-lang="zh">最后更新：2026年4月</div>
+    <div class="updated" data-lang="en" style="display:none">Last updated: April 2026</div>
   </header>
 
   <div class="lang-toggle">
@@ -175,7 +174,7 @@
   </div>
 
   <footer>
-    <p>© 2025 DotSleep &nbsp;·&nbsp; <a href="mailto:feedback@dotsleep.app">feedback@dotsleep.app</a></p>
+    <p>© 2026 DotSleep &nbsp;·&nbsp; <a href="mailto:feedback@dotsleep.app">feedback@dotsleep.app</a></p>
   </footer>
 
 </div>
@@ -183,12 +182,18 @@
 <script>
   function setLang(lang) {
     document.querySelectorAll('[data-lang]').forEach(el => {
-      el.style.display = el.dataset.lang === lang ? '' : 'none';
+      if (el.dataset.lang === lang) {
+        el.style.removeProperty('display');
+      } else {
+        el.style.display = 'none';
+      }
     });
     document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang === 'zh' ? '中' : 'en'));
+      btn.classList.toggle('active', btn.textContent.trim() === (lang === 'zh' ? '中文' : 'English'));
     });
   }
+  // 页面加载后初始化为中文
+  document.addEventListener('DOMContentLoaded', () => setLang('zh'));
 </script>
 </body>
 </html>
