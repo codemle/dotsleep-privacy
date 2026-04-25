@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DotSleep 隐私政策 · Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0f0f13;
+      --card: #1a1a24;
+      --border: #2a2a3a;
+      --accent: #a78bfa;
+      --text: #e2e8f0;
+      --muted: #8892a4;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      line-height: 1.7;
+      padding: 24px 16px 60px;
+    }
+    .container { max-width: 680px; margin: 0 auto; }
+    header { text-align: center; padding: 48px 0 40px; }
+    .app-icon {
+      width: 72px; height: 72px;
+      background: linear-gradient(135deg, #a78bfa, #818cf8);
+      border-radius: 18px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 36px; margin-bottom: 16px;
+    }
+    h1 { font-size: 26px; font-weight: 700; color: var(--text); }
+    .subtitle { color: var(--muted); font-size: 14px; margin-top: 6px; }
+    .updated { color: var(--muted); font-size: 13px; margin-top: 4px; }
+    .lang-toggle {
+      display: flex; gap: 8px; justify-content: center; margin: 20px 0 32px;
+    }
+    .lang-btn {
+      padding: 6px 18px; border-radius: 20px; border: 1px solid var(--border);
+      background: transparent; color: var(--muted); cursor: pointer; font-size: 13px;
+      transition: all 0.2s;
+    }
+    .lang-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px; margin-bottom: 16px;
+    }
+    .card h2 {
+      font-size: 15px; font-weight: 600; color: var(--accent);
+      margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+    }
+    .card p, .card li { font-size: 15px; color: var(--text); }
+    .card ul { padding-left: 20px; }
+    .card li { margin-bottom: 6px; }
+    .highlight {
+      background: linear-gradient(135deg, rgba(167,139,250,0.12), rgba(129,140,248,0.08));
+      border: 1px solid rgba(167,139,250,0.3);
+      border-radius: var(--radius); padding: 16px 20px; margin-bottom: 24px;
+      font-size: 15px; text-align: center;
+    }
+    footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 40px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    [data-lang="en"] { display: none; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="app-icon">🌙</div>
+    <h1>DotSleep</h1>
+    <div class="subtitle" data-lang="zh">隐私政策</div>
+    <div class="subtitle" data-lang="en" style="display:none">Privacy Policy</div>
+    <div class="updated" data-lang="zh">最后更新：2025年1月</div>
+    <div class="updated" data-lang="en" style="display:none">Last updated: January 2025</div>
+  </header>
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('zh')">中文</button>
+    <button class="lang-btn" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- 核心声明 -->
+  <div class="highlight" data-lang="zh">
+    🔒 DotSleep <strong>不收集、不上传、不出售</strong>任何用户数据。<br>
+    所有睡眠记录仅存储在您的设备本地或您的 iCloud 账户中。
+  </div>
+  <div class="highlight" data-lang="en" style="display:none">
+    🔒 DotSleep <strong>does not collect, upload, or sell</strong> any user data.<br>
+    All sleep records are stored only on your device or in your personal iCloud account.
+  </div>
+
+  <!-- 数据存储 -->
+  <div class="card">
+    <h2 data-lang="zh">📱 数据存储</h2>
+    <h2 data-lang="en" style="display:none">📱 Data Storage</h2>
+    <div data-lang="zh">
+      <p>您的睡眠记录、设置偏好和个人目标均存储在以下位置：</p>
+      <ul style="margin-top:10px">
+        <li><strong>设备本地</strong>：通过 SwiftData / SQLite 存储在您的 iPhone 上</li>
+        <li><strong>iCloud（可选）</strong>：开通会员并启用 iCloud 同步后，数据通过 Apple CloudKit 同步到您的私人 iCloud 账户，仅您可访问</li>
+      </ul>
+    </div>
+    <div data-lang="en" style="display:none">
+      <p>Your sleep records, settings, and personal goals are stored in:</p>
+      <ul style="margin-top:10px">
+        <li><strong>On-device</strong>: Stored locally on your iPhone via SwiftData / SQLite</li>
+        <li><strong>iCloud (optional)</strong>: If you enable iCloud Sync as a Premium member, data syncs to your private iCloud account via Apple CloudKit — accessible only by you</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Apple Health -->
+  <div class="card">
+    <h2 data-lang="zh">❤️ Apple Health 数据</h2>
+    <h2 data-lang="en" style="display:none">❤️ Apple Health Data</h2>
+    <div data-lang="zh">
+      <p>DotSleep 可申请读取 Apple 健康 App 中的睡眠数据，用于自动导入睡眠记录。</p>
+      <ul style="margin-top:10px">
+        <li>仅在您明确授权后才会读取</li>
+        <li>健康数据<strong>不会</strong>上传到任何服务器</li>
+        <li>数据仅用于在 App 内展示，不作其他用途</li>
+        <li>您可随时在「设置 → 隐私与安全性 → 健康」中撤销授权</li>
+      </ul>
+    </div>
+    <div data-lang="en" style="display:none">
+      <p>DotSleep may request access to sleep data in the Apple Health app to automatically import sleep records.</p>
+      <ul style="margin-top:10px">
+        <li>Access is only requested with your explicit permission</li>
+        <li>Health data is <strong>never</strong> uploaded to any server</li>
+        <li>Data is used solely for display within the app</li>
+        <li>You can revoke access at any time in Settings → Privacy & Security → Health</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 第三方服务 -->
+  <div class="card">
+    <h2 data-lang="zh">🔗 第三方服务</h2>
+    <h2 data-lang="en" style="display:none">🔗 Third-Party Services</h2>
+    <div data-lang="zh">
+      <p>DotSleep <strong>不集成</strong>任何第三方数据分析、广告或追踪 SDK。</p>
+      <p style="margin-top:8px">使用到的 Apple 系统框架：</p>
+      <ul style="margin-top:10px">
+        <li><strong>StoreKit 2</strong>：处理 App 内购买，遵守 Apple 隐私准则</li>
+        <li><strong>CloudKit</strong>：iCloud 同步（可选，会员专属），数据归属您的 Apple ID</li>
+        <li><strong>HealthKit</strong>：读取睡眠数据（需授权）</li>
+      </ul>
+    </div>
+    <div data-lang="en" style="display:none">
+      <p>DotSleep does <strong>not</strong> integrate any third-party analytics, advertising, or tracking SDKs.</p>
+      <p style="margin-top:8px">Apple system frameworks used:</p>
+      <ul style="margin-top:10px">
+        <li><strong>StoreKit 2</strong>: Handles in-app purchases, subject to Apple's privacy guidelines</li>
+        <li><strong>CloudKit</strong>: iCloud sync (optional, Premium only) — data belongs to your Apple ID</li>
+        <li><strong>HealthKit</strong>: Reads sleep data (requires your authorization)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 联系方式 -->
+  <div class="card">
+    <h2 data-lang="zh">✉️ 联系我们</h2>
+    <h2 data-lang="en" style="display:none">✉️ Contact</h2>
+    <div data-lang="zh">
+      <p>如有任何隐私相关问题，请通过以下方式联系：</p>
+      <p style="margin-top:8px"><a href="mailto:feedback@dotsleep.app" style="color:#a78bfa">feedback@dotsleep.app</a></p>
+    </div>
+    <div data-lang="en" style="display:none">
+      <p>For any privacy-related questions, please contact:</p>
+      <p style="margin-top:8px"><a href="mailto:feedback@dotsleep.app" style="color:#a78bfa">feedback@dotsleep.app</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 DotSleep &nbsp;·&nbsp; <a href="mailto:feedback@dotsleep.app">feedback@dotsleep.app</a></p>
+  </footer>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.style.display = el.dataset.lang === lang ? '' : 'none';
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang === 'zh' ? '中' : 'en'));
+    });
+  }
+</script>
+</body>
+</html>
